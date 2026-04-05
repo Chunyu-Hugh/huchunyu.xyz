@@ -55,6 +55,20 @@ const BLOG = {
 
   // 自定义菜单
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || true, // 支持Menu类型的菜单，替代了3.12版本前的Page类型
+  // 菜单排序：按 slug 顺序排列，SubMenu 紧跟其父 Menu
+  MENU_SORT_ORDER: [
+    '/',                    // 首页
+    '/category/生活随笔',    // 生活随笔 (Menu)
+    '/tag/感悟',            //   日常感悟 (SubMenu)
+    '/tag/travel',          //   旅行记录 (SubMenu)
+    '/tag/读书',            //   读书笔记 (SubMenu)
+    '/category/学术研究',    // 学术科研 (Menu)
+    '/tag/research',        //   科研项目 (SubMenu)
+    '/tag/paper',           //   论文笔记 (SubMenu)
+    '/category/技术分享',    // 技术分享 (Menu)
+    '/about',               // 关于 (Menu)
+    '/links',               // 友链 (Menu)
+  ],
 
   // 文章列表相关设置
   CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
