@@ -59,9 +59,9 @@ const BLOG = {
   MENU_SORT_ORDER: [
     '/',                    // 首页
     '/category/生活随笔',    // 生活随笔 (Menu)
-    '/tag/感悟',            //   日常感悟 (SubMenu)
+    '/tag/thoughts',        //   日常感悟 (SubMenu)
     '/tag/travel',          //   旅行记录 (SubMenu)
-    '/tag/读书',            //   读书笔记 (SubMenu)
+    '/tag/reading',         //   读书笔记 (SubMenu)
     '/category/学术研究',    // 学术科研 (Menu)
     '/tag/research',        //   科研项目 (SubMenu)
     '/tag/paper',           //   论文笔记 (SubMenu)
