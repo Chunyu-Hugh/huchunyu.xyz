@@ -3,20 +3,20 @@ const CONFIG = {
   MAGZINE_HOME_BANNER_ENABLE: true, // 首屏右上角的宣传位
   MAGZINE_HOME_BUTTON: true,
   MAGZINE_HOME_BUTTON_URL: '/about',
-  MAGZINE_HOME_BUTTON_TEXT: '了解更多',
+  MAGZINE_HOME_BUTTON_TEXT: '关于我',
 
-  MAGZINE_HOME_HIDDEN_CATEGORY: '分享杂文', //不希望在首页展示的文章分类，用英文逗号隔开
+  MAGZINE_HOME_HIDDEN_CATEGORY: '模板', //不希望在首页展示的文章分类，用英文逗号隔开
 
-  MAGZINE_HOME_TITLE: '立即开创您的在线业务。完全免费。',
+  MAGZINE_HOME_TITLE: '认真生活，记录生活',
   MAGZINE_HOME_DESCRIPTION:
-    '借助NotionNext，获得助您开创、经营和扩展业务所需的全部工具和帮助。',
-  MAGZINE_HOME_TIPS: 'AI时代来临，这是属于超级个体的狂欢盛宴！',
+    '一个在美国读博的普通人，用文字记录生活感悟、旅行见闻和成长点滴。',
+  MAGZINE_HOME_TIPS: '生活不在别处，就在此刻。',
 
   // 首页底部推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
-  MAGZINE_RECOMMEND_POST_TAG: '推荐',
+  MAGZINE_RECOMMEND_POST_TAG: '',
   MAGZINE_RECOMMEND_POST_COUNT: 6,
-  MAGZINE_RECOMMEND_POST_TITLE: '推荐文章',
-  MAGZINE_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
+  MAGZINE_RECOMMEND_POST_TITLE: '最近更新',
+  MAGZINE_RECOMMEND_POST_SORT_BY_UPDATE_TIME: true, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
 
   // Style
   MAGZINE_RIGHT_PANEL_DARK: process.env.NEXT_PUBLIC_MAGZINE_RIGHT_DARK || false, // 右侧面板深色模式
@@ -31,75 +31,34 @@ const CONFIG = {
 
   // 文章页面联系卡
   MAGZINE_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  MAGZINE_SOCIAL_CARD_TITLE_1: '交流频道',
-  MAGZINE_SOCIAL_CARD_TITLE_2: '加入社群讨论分享',
-  MAGZINE_SOCIAL_CARD_TITLE_3: '点击加入社群',
-  MAGZINE_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/chat-community',
+  MAGZINE_SOCIAL_CARD_TITLE_1: '联系我',
+  MAGZINE_SOCIAL_CARD_TITLE_2: 'chu034@odu.edu',
+  MAGZINE_SOCIAL_CARD_TITLE_3: '访问个人主页',
+  MAGZINE_SOCIAL_CARD_URL: 'https://chunyuhu.com',
 
   // 页脚菜单
   MAGZINE_FOOTER_LINKS: [
     {
-      name: '友情链接',
+      name: '博客分类',
       menus: [
-        {
-          title: 'Tangly的学习笔记',
-          href: 'https://blog.tangly1024.com'
-        },
-        {
-          title: 'NotionNext',
-          href: 'https://www.tangly1024.com'
-        }
+        { title: '生活随笔', href: '/category/生活随笔' },
+        { title: '学术科研', href: '/category/学术研究' },
+        { title: '技术分享', href: '/category/技术分享' }
       ]
     },
     {
-      name: '开发者',
+      name: '关于',
       menus: [
-        { title: 'Github', href: 'https://github.com/tangly1024/NotionNext' },
-        {
-          title: '开发帮助',
-          href: 'https://docs.tangly1024.com/article/how-to-develop-with-notion-next'
-        },
-        {
-          title: '功能反馈',
-          href: 'https://github.com/tangly1024/NotionNext/issues/new/choose'
-        },
-        {
-          title: '技术讨论',
-          href: 'https://github.com/tangly1024/NotionNext/discussions'
-        },
-        {
-          title: '关于作者',
-          href: 'https://blog.tangly1024.com/about'
-        }
+        { title: '关于我', href: '/about' },
+        { title: '个人主页', href: 'https://chunyuhu.com' },
+        { title: '友情链接', href: '/links' }
       ]
     },
     {
-      name: '支持',
+      name: '社交',
       menus: [
-        {
-          title: '站长社群',
-          href: 'https://docs.tangly1024.com/article/chat-community'
-        },
-        {
-          title: '咨询与定制',
-          href: 'https://docs.tangly1024.com/article/my-service'
-        },
-        {
-          title: '升级手册',
-          href: 'https://docs.tangly1024.com/article/my-service'
-        },
-        {
-          title: '安装教程',
-          href: 'https://docs.tangly1024.com/article/how-to-update-notionnext'
-        },
-        { title: 'SEO推广', href: 'https://seo.tangly1024.com/' }
-      ]
-    },
-    {
-      name: '解决方案',
-      menus: [
-        { title: '建站工具', href: 'https://www.tangly1024.com/' },
-        { title: 'NotionNext', href: 'https://docs.tangly1024.com/about' }
+        { title: 'GitHub', href: 'https://github.com/Chunyu-Hugh' },
+        { title: 'LinkedIn', href: 'https://www.linkedin.com/in/chunyu-hu-249970a7' }
       ]
     }
   ],
