@@ -1,5 +1,6 @@
 import Collapse from '@/components/Collapse'
 import DarkModeButton from '@/components/DarkModeButton'
+import LangSwitchButton from '@/components/LangSwitchButton'
 import DashboardButton from '@/components/ui/dashboard/DashboardButton'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
@@ -173,6 +174,11 @@ export default function Header(props) {
                   : 'fa-solid fa-magnifying-glass' +
                     ' align-middle hover:scale-110 transform duration-200'
               }></i>
+          </div>
+
+          {/* 语言切换 */}
+          <div className='p-2.5 hover:bg-black hover:bg-opacity-10 rounded-full'>
+            <LangSwitchButton />
           </div>
 
           {/* 深色模式切换 */}
