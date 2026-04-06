@@ -5,8 +5,7 @@ const BLOG = {
   // Important page_id！！！Duplicate Template from  https://tanghh.notion.site/02ab3b8678004aa69e9e415905ef32a5
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
-    '40a6b3c04d614c50a20be410cc859162', // 文章页的Notion ID，必填！例如 '02ab3b8678004aa69e9e415905ef32a5'，见上方链接
-    // '02ab3b8678004aa69e9e415905ef32a5,en:7c1d570661754c8fbc568e00a01fd70e',
+    '40a6b3c04d614c50a20be410cc859162,en:1eaad398d1458291b95401ae12f8ed8a', // 中文+英文双语
   THEME: process.env.NEXT_PUBLIC_THEME || 'magzine', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: process.env.NEXT_PUBLIC_SINCE || 2023, // e.g if leave this empty, current year will be used.
