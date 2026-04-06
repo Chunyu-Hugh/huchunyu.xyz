@@ -1,5 +1,7 @@
 import { siteConfig } from '@/lib/config'
+import { useGlobal } from '@/lib/global'
 import CONFIG from '../config'
+import { getLocaleText } from '../locale-helper'
 import PostItemCard from './PostItemCard'
 import PostListEmpty from './PostListEmpty'
 import Swiper from './Swiper'
@@ -12,9 +14,10 @@ import Swiper from './Swiper'
  * @constructor
  */
 const PostListRecommend = ({ latestPosts, allNavPages }) => {
+  const { lang } = useGlobal()
   // 获取推荐文章
   const recommendPosts = getTopPosts({ latestPosts, allNavPages })
-  const title = siteConfig('MAGZINE_RECOMMEND_POST_TITLE', '', CONFIG)
+  const title = getLocaleText(siteConfig('MAGZINE_RECOMMEND_POST_TITLE', '', CONFIG), lang)
 
   if (!recommendPosts || recommendPosts.length === 0) {
     return <PostListEmpty />

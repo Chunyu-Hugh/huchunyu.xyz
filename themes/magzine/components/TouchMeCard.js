@@ -1,13 +1,16 @@
 import FlipCard from '@/components/FlipCard'
 import { siteConfig } from '@/lib/config'
+import { useGlobal } from '@/lib/global'
 import SmartLink from '@/components/SmartLink'
 import CONFIG from '../config'
+import { getLocaleText } from '../locale-helper'
 
 /**
  * 交流频道
  * @returns
  */
 export default function TouchMeCard() {
+  const { lang } = useGlobal()
   // 开关
   if (!siteConfig('MAGZINE_SOCIAL_CARD', null, CONFIG)) {
     return <></>
@@ -20,7 +23,7 @@ export default function TouchMeCard() {
         frontContent={
           <div className='h-full'>
             <h2 className='font-[1000] text-3xl'>
-              {siteConfig('MAGZINE_SOCIAL_CARD_TITLE_1')}
+              {getLocaleText(siteConfig('MAGZINE_SOCIAL_CARD_TITLE_1'), lang)}
             </h2>
             <h3 className='pt-2'>
               {siteConfig('MAGZINE_SOCIAL_CARD_TITLE_2')}
@@ -30,7 +33,7 @@ export default function TouchMeCard() {
         backContent={
           <SmartLink href={siteConfig('MAGZINE_SOCIAL_CARD_URL', '#', CONFIG)}>
             <div className='font-[1000] text-xl h-full'>
-              {siteConfig('MAGZINE_SOCIAL_CARD_TITLE_3')}
+              {getLocaleText(siteConfig('MAGZINE_SOCIAL_CARD_TITLE_3'), lang)}
             </div>
           </SmartLink>
         }

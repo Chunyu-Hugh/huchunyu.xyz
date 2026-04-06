@@ -15,8 +15,13 @@ import SocialButton from './SocialButton'
  * 网页底脚
  */
 const Footer = ({ title }) => {
-  const { siteInfo } = useGlobal()
-  const MAGZINE_FOOTER_LINKS = siteConfig('MAGZINE_FOOTER_LINKS', [], CONFIG)
+  const { siteInfo, lang } = useGlobal()
+  const footerLinksRaw = siteConfig('MAGZINE_FOOTER_LINKS', [], CONFIG)
+  // 支持多语言 footer links
+  const isEn = lang === 'en' || lang === 'en-US' || lang?.startsWith('en')
+  const MAGZINE_FOOTER_LINKS = Array.isArray(footerLinksRaw)
+    ? footerLinksRaw
+    : (isEn ? (footerLinksRaw?.en || footerLinksRaw?.['zh-CN'] || []) : (footerLinksRaw?.['zh-CN'] || footerLinksRaw?.en || []))
 
   return (
     <footer

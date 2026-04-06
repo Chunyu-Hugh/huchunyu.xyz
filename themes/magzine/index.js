@@ -101,6 +101,7 @@ const LayoutBase = props => {
  */
 const LayoutIndex = props => {
   const { posts } = props
+  const { locale } = useGlobal()
   // 最新文章 从第4个元素开始截取出4个
   const newPosts = posts.slice(3, 7)
 
@@ -111,7 +112,7 @@ const LayoutIndex = props => {
 
       {/* 最新文章区块 */}
       <PostSimpleListHorizontal
-        title='最新文章'
+        title={locale.COMMON.LATEST_POSTS}
         href='/archive'
         posts={newPosts}
       />

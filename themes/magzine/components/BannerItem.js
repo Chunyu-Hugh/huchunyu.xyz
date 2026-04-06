@@ -1,6 +1,8 @@
 import { siteConfig } from '@/lib/config'
+import { useGlobal } from '@/lib/global'
 import SmartLink from '@/components/SmartLink'
 import CONFIG from '../config'
+import { getLocaleText } from '../locale-helper'
 
 /**
  * 文字广告Banner
@@ -8,14 +10,15 @@ import CONFIG from '../config'
  * @returns
  */
 export default function BannerItem() {
+  const { lang } = useGlobal()
   // 首屏信息栏按钮文字
   const banner = siteConfig('MAGZINE_HOME_BANNER_ENABLE', null, CONFIG)
   const button = siteConfig('MAGZINE_HOME_BUTTON', null, CONFIG)
-  const text = siteConfig('MAGZINE_HOME_BUTTON_TEXT', null, CONFIG)
+  const text = getLocaleText(siteConfig('MAGZINE_HOME_BUTTON_TEXT', null, CONFIG), lang)
   const url = siteConfig('MAGZINE_HOME_BUTTON_URL', null, CONFIG)
-  const title = siteConfig('MAGZINE_HOME_TITLE', null, CONFIG)
-  const description = siteConfig('MAGZINE_HOME_DESCRIPTION', null, CONFIG)
-  const tips = siteConfig('MAGZINE_HOME_TIPS', null, CONFIG)
+  const title = getLocaleText(siteConfig('MAGZINE_HOME_TITLE', null, CONFIG), lang)
+  const description = getLocaleText(siteConfig('MAGZINE_HOME_DESCRIPTION', null, CONFIG), lang)
+  const tips = getLocaleText(siteConfig('MAGZINE_HOME_TIPS', null, CONFIG), lang)
 
   if (!banner) {
     return null
