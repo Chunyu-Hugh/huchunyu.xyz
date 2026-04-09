@@ -34,7 +34,7 @@ const CONFIG = {
   // 文章页面联系卡
   MAGZINE_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   MAGZINE_SOCIAL_CARD_TITLE_1: { 'zh-CN': '联系我', en: 'Contact Me' },
-  MAGZINE_SOCIAL_CARD_TITLE_2: 'chu034@odu.edu',
+  MAGZINE_SOCIAL_CARD_TITLE_2: '',
   MAGZINE_SOCIAL_CARD_TITLE_3: { 'zh-CN': '访问个人主页', en: 'Visit Homepage' },
   MAGZINE_SOCIAL_CARD_URL: 'https://chunyuhu.com',
 
