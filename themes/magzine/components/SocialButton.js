@@ -37,14 +37,14 @@ const SocialButton = () => {
 
   return (
     <div className='w-full justify-center flex-wrap flex'>
-      <div className='space-x-3 text-xl flex items-center text-white dark:text-gray-300 '>
+      <div className='space-x-3 text-xl flex items-center text-white/90 dark:text-warm-300'>
         {CONTACT_GITHUB && (
           <a
             target='_blank'
             rel='noreferrer'
             title={'github'}
             href={CONTACT_GITHUB}>
-            <i className='transform hover:scale-125 duration-150 fab fa-github dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-github dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_TWITTER && (
@@ -53,7 +53,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'twitter'}
             href={CONTACT_TWITTER}>
-            <i className='transform hover:scale-125 duration-150 fab fa-twitter dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-twitter dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_TELEGRAM && (
@@ -62,7 +62,7 @@ const SocialButton = () => {
             rel='noreferrer'
             href={CONTACT_TELEGRAM}
             title={'telegram'}>
-            <i className='transform hover:scale-125 duration-150 fab fa-telegram dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-telegram dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_LINKEDIN && (
@@ -71,7 +71,7 @@ const SocialButton = () => {
             rel='noreferrer'
             href={CONTACT_LINKEDIN}
             title={'linkIn'}>
-            <i className='transform hover:scale-125 duration-150 fab fa-linkedin dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-linkedin dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_WEIBO && (
@@ -80,7 +80,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'weibo'}
             href={CONTACT_WEIBO}>
-            <i className='transform hover:scale-125 duration-150 fab fa-weibo dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-weibo dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_INSTAGRAM && (
@@ -89,7 +89,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'instagram'}
             href={CONTACT_INSTAGRAM}>
-            <i className='transform hover:scale-125 duration-150 fab fa-instagram dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-instagram dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_EMAIL && (
@@ -98,7 +98,7 @@ const SocialButton = () => {
             title='email'
             className='cursor-pointer'
             ref={emailIcon}>
-            <i className='transform hover:scale-125 duration-150 fas fa-envelope dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fas fa-envelope dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {ENABLE_RSS && (
@@ -107,7 +107,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'RSS'}
             href={'/rss/feed.xml'}>
-            <i className='transform hover:scale-125 duration-150 fas fa-rss dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fas fa-rss dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_BILIBILI && (
@@ -116,7 +116,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'bilibili'}
             href={CONTACT_BILIBILI}>
-            <i className='transform hover:scale-125 duration-150 dark:hover:text-green-400 hover:text-green-600 fab fa-bilibili' />
+            <i className='transform hover:scale-125 duration-150 dark:hover:text-accent hover:text-accent fab fa-bilibili' />
           </a>
         )}
         {CONTACT_YOUTUBE && (
@@ -125,7 +125,7 @@ const SocialButton = () => {
             rel='noreferrer'
             title={'youtube'}
             href={CONTACT_YOUTUBE}>
-            <i className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-green-400 hover:text-green-600' />
+            <i className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-accent hover:text-accent' />
           </a>
         )}
         {CONTACT_XIAOHONGSHU && (
@@ -163,7 +163,7 @@ const SocialButton = () => {
             onMouseLeave={closePopover}
             aria-label={'微信公众号'}>
             <div id='wechat-button'>
-              <i className='transform scale-105 hover:scale-125 duration-150 fab fa-weixin  dark:hover:text-green-400 hover:text-green-600' />
+              <i className='transform scale-105 hover:scale-125 duration-150 fab fa-weixin  dark:hover:text-accent hover:text-accent' />
             </div>
             {/* 二维码弹框 */}
             <div className='absolute'>
@@ -171,7 +171,7 @@ const SocialButton = () => {
                 id='pop'
                 className={
                   (qrCodeShow ? 'opacity-100 ' : ' invisible opacity-0') +
-                  ' z-40 absolute bottom-10 -left-10 bg-white shadow-xl transition-all duration-200 text-center'
+                  ' z-40 absolute bottom-10 -left-10 bg-white shadow-notion-lg rounded-card transition-all duration-200 text-center'
                 }>
                 <div className='p-2 mt-1 w-28 h-28'>
                   {qrCodeShow && <QrCode value={CONTACT_WEHCHAT_PUBLIC} />}

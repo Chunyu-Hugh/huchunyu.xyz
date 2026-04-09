@@ -9,7 +9,7 @@ export default function LogoBar({ siteInfo, className }) {
       className={`w-full flex items-center ${className || ''}`}>
       <SmartLink
         href='/'
-        className='inline-flex items-center whitespace-nowrap logo font-semibold hover:bg-black hover:text-white p-2 rounded-xl duration-200 dark:text-gray-200'>
+        className='inline-flex items-center whitespace-nowrap logo font-semibold hover:text-accent p-2 rounded-card duration-200 dark:text-gray-200 transition-colors'>
         <LazyImage
           priority
           src={siteInfo?.icon}

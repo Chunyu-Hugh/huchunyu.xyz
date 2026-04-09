@@ -24,9 +24,9 @@ const CategoryGroup = ({ currentCategory, categoryOptions }) => {
               passHref
               className={
                 (selected
-                  ? 'bg-gray-600 text-white '
-                  : 'dark:text-gray-400 text-gray-900 ') +
-                'text-lg hover:underline flex text-md items-center duration-300 cursor-pointer py-1 whitespace-nowrap'
+                  ? 'text-accent font-medium '
+                  : 'dark:text-warm-300 text-warm-dark ') +
+                'text-lg hover:text-accent flex text-md items-center duration-200 cursor-pointer py-1 whitespace-nowrap transition-colors'
               }>
               <span>
                 {category.name} {category?.count && `(${category?.count})`}

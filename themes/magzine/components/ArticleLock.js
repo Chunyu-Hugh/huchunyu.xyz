@@ -45,10 +45,10 @@ export const ArticleLock = props => {
               }
             }}
             ref={passwordInputRef} // 绑定ref到passwordInputRef变量
-            className='outline-none w-full text-sm pl-5 rounded-l transition focus:shadow-lg dark:text-gray-300  leading-10 text-black bg-gray-100 dark:bg-gray-500'></input>
+            className='outline-none w-full text-sm pl-5 rounded-l-standard transition focus:shadow-notion-sm dark:text-gray-300 leading-10 text-warm-dark bg-warm-white dark:bg-surface-3'></input>
           <div
             onClick={submitPassword}
-            className='px-3 whitespace-nowrap cursor-pointer items-center justify-center py-2 bg-gray-500 hover:bg-gray-400 text-white rounded-r duration-300'>
+            className='px-3 whitespace-nowrap cursor-pointer items-center justify-center py-2 bg-accent hover:bg-accent-dark text-white rounded-r-standard duration-200 transition-colors'>
             <i className={'duration-200 cursor-pointer fas fa-key'}>
               &nbsp;{locale.COMMON.SUBMIT}
             </i>

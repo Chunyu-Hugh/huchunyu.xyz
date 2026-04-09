@@ -91,12 +91,12 @@ const Swiper = ({ posts }) => {
     <div className='relative w-full mx-auto'>
       {/* 左侧点击区域 */}
       <div
-        className='absolute inset-y-0 left-0 w-1/6 z-10 cursor-move bg-black hover:opacity-10 opacity-0 duration-100'
+        className='absolute inset-y-0 left-0 w-1/6 z-10 cursor-move bg-warm-dark hover:opacity-10 opacity-0 duration-100'
         onClick={goToPrevious}></div>
 
       {/* 右侧点击区域 */}
       <div
-        className='absolute inset-y-0 right-0 w-1/6 z-10 cursor-move bg-black hover:opacity-10 opacity-0 duration-100'
+        className='absolute inset-y-0 right-0 w-1/6 z-10 cursor-move bg-warm-dark hover:opacity-10 opacity-0 duration-100'
         onClick={goToNext}></div>
 
       {/* Swiper Container */}
@@ -125,8 +125,8 @@ const Swiper = ({ posts }) => {
             onClick={() => handleIndicatorClick(index)}
             className={`w-3 h-3 rounded-full ${
               currentIndex === index
-                ? 'bg-black dark:bg-white'
-                : 'bg-gray-300 dark:bg-gray-700'
+                ? 'bg-warm-dark dark:bg-white'
+                : 'bg-warm-300 dark:bg-surface-4'
             }`}></button>
         ))}
       </div>

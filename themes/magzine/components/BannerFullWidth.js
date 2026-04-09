@@ -15,7 +15,7 @@ export default function BannerFullWidth() {
     return null
   }
   return (
-    <div className='w-full flex lg:flex-row flex-col justify-between lg:h-96 bg-black'>
+    <div className='w-full flex lg:flex-row flex-col justify-between lg:h-96 bg-surface-1'>
       <LazyImage
         alt={siteInfo?.title}
         src={siteInfo?.pageCover}

@@ -166,7 +166,7 @@ export default function Header(props) {
           {/* 搜索按钮 */}
           <div
             onClick={toggleShowSearchInput}
-            className='flex text-center items-center cursor-pointer p-2.5 hover:bg-black hover:bg-opacity-10 rounded-full'>
+            className='flex text-center items-center cursor-pointer p-2.5 hover:bg-black/[0.06] dark:hover:bg-white/[0.06] rounded-full'>
             <i
               className={
                 showSearchInput
@@ -177,12 +177,12 @@ export default function Header(props) {
           </div>
 
           {/* 语言切换 */}
-          <div className='p-2.5 hover:bg-black hover:bg-opacity-10 rounded-full'>
+          <div className='p-2.5 hover:bg-black/[0.06] dark:hover:bg-white/[0.06] rounded-full'>
             <LangSwitchButton />
           </div>
 
           {/* 深色模式切换 */}
-          <div className='p-2.5 hover:bg-black hover:bg-opacity-10 rounded-full'>
+          <div className='p-2.5 hover:bg-black/[0.06] dark:hover:bg-white/[0.06] rounded-full'>
             <DarkModeButton />
           </div>
 

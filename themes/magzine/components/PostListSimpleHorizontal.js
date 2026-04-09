@@ -13,7 +13,7 @@ const PostSimpleListHorizontal = ({ title, href, posts }) => {
   }
 
   return (
-    <div className='w-full py-10 bg-[#F6F6F1] dark:bg-black'>
+    <div className='w-full py-10 bg-warm-white dark:bg-surface-2'>
       <div className='max-w-screen-3xl w-full mx-auto px-4 lg:px-0'>
         {/* 标题 */}
         <div className='flex justify-between items-center py-6'>

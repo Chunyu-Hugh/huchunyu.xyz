@@ -17,7 +17,7 @@ const PostListHorizontal = ({ title, href, posts, hasBg }) => {
 
   return (
     <div
-      className={`w-full py-10 px-2 lg:px-0 ${hasBg ? 'bg-[#F6F6F1] dark:bg-black' : ''}`}>
+      className={`w-full py-10 px-2 lg:px-0 ${hasBg ? 'bg-warm-white dark:bg-surface-2' : ''}`}>
       <div className='max-w-screen-3xl w-full mx-auto'>
         {/* 标题 */}
         <div className='flex justify-between items-center py-6'>
