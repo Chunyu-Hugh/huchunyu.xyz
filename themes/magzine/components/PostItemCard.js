@@ -21,7 +21,7 @@ const PostItemCard = ({ post }) => {
             href={post?.href}
             passHref
             className={
-              'cursor-pointer hover:underline leading-tight text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400'
+              'cursor-pointer hover:underline leading-tight text-warm-dark dark:text-gray-300 hover:text-warm-500 dark:hover:text-gray-400 transition-colors duration-200'
             }>
             <div className='w-full h-40 aspect-video overflow-hidden mb-2'>
               <LazyImage

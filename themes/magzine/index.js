@@ -62,7 +62,7 @@ const LayoutBase = props => {
 
       <div
         id='theme-magzine'
-        className={`${siteConfig('FONT_STYLE')} bg-white dark:bg-hexo-black-gray w-full h-full min-h-screen flex flex-col justify-between dark:text-gray-300 scroll-smooth`}>
+        className={`${siteConfig('FONT_STYLE')} bg-white dark:bg-surface-1 w-full h-full min-h-screen flex flex-col justify-between dark:text-gray-300 scroll-smooth`}>
         <main
           id='wrapper'
           className='relative flex flex-col justify-between w-full h-full mx-auto'>
@@ -232,7 +232,7 @@ const LayoutSlug = props => {
                   <div className='lg:col-span-1 flex flex-col justify-between px-2 lg:px-0 space-y-2 lg:space-y-0'>
                     {/* meta信息 */}
                     <section className='text-lg gap-y-6 text-center lg:text-left'>
-                      <div className='text-gray-500 py-1 dark:text-gray-600 '>
+                      <div className='text-warm-500 py-1 dark:text-warm-300'>
                         {/* <div className='whitespace-nowrap'>
           <i className='far fa-calendar mr-2' />
           {post?.publishDay}
@@ -408,9 +408,8 @@ const LayoutCategoryIndex = props => {
   const { locale } = useGlobal()
   return (
     <div className='w-full max-w-screen-3xl mx-auto min-h-96'>
-      <div className='bg-white dark:bg-gray-700 py-10'>
+      <div className='bg-white dark:bg-surface-2 py-10'>
         <div className='dark:text-gray-200 mb-5 text-2xl font-bold'>
-          {/* <i className='mr-4 fas fa-th' /> */}
           {locale.COMMON.CATEGORY}:
         </div>
         <div id='category-list' className='duration-200 flex flex-wrap'>
@@ -423,9 +422,8 @@ const LayoutCategoryIndex = props => {
                 legacyBehavior>
                 <div
                   className={
-                    'hover:text-black dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600 px-5 cursor-pointer py-2 hover:bg-gray-100'
+                    'hover:text-accent dark:hover:text-white dark:text-gray-300 dark:hover:bg-surface-4 px-5 cursor-pointer py-2 hover:bg-warm-white rounded-micro transition-colors duration-200'
                   }>
-                  {/* <i className='mr-4 fas fa-folder' /> */}
                   {category.name}({category.count})
                 </div>
               </SmartLink>
@@ -447,9 +445,8 @@ const LayoutTagIndex = props => {
   const { locale } = useGlobal()
   return (
     <div className='w-full max-w-screen-3xl mx-auto min-h-96'>
-      <div className='bg-white dark:bg-gray-700 py-10'>
+      <div className='bg-white dark:bg-surface-2 py-10'>
         <div className='dark:text-gray-200 mb-5  text-2xl font-bold'>
-          {/* <i className='mr-4 fas fa-tag' /> */}
           {locale.COMMON.TAGS}:
         </div>
         <div id='tags-list' className='duration-200 flex flex-wrap'>

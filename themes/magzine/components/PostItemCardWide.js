@@ -36,7 +36,7 @@ const PostItemCardWide = ({ post, showSummary }) => {
         </SmartLink>
 
         {(!showPreview || showSummary) && (
-          <main className='line-clamp-2 text-gray-900 dark:text-gray-300 text-sm'>
+          <main className='line-clamp-2 text-warm-dark dark:text-gray-300 text-sm'>
             {post?.summary}
           </main>
         )}

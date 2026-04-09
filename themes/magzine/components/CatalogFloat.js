@@ -20,7 +20,7 @@ const CatalogFloat = ({ post, cRef }) => {
         onClick={() => {
           changeTocVisible(true)
         }}
-        className='fixed right-0 bottom-24 z-20 shadow bg-white dark:bg-hexo-black-gray'>
+        className='fixed right-0 bottom-24 z-20 shadow-notion-sm bg-white dark:bg-surface-3 rounded-l-card'>
         {!tocVisible && <CatalogFloatButton />}
       </div>
       <div id='magzine-toc-float' className='fixed top-0 right-0 z-40'>
@@ -30,11 +30,11 @@ const CatalogFloat = ({ post, cRef }) => {
             (tocVisible
               ? 'animate__slideInRight '
               : ' -mr-72 animate__slideOutRight') +
-            ' overflow-y-hidden shadow-card w-60 duration-200 fixed right-1 bottom-16 rounded py-2 bg-white dark:bg-gray-600'
+            ' overflow-y-hidden shadow-notion-lg w-60 duration-200 fixed right-1 bottom-16 rounded-card py-2 bg-white dark:bg-surface-3 border border-black/[0.08] dark:border-white/[0.06]'
           }>
           {post && (
             <>
-              <div className='dark:text-gray-400 text-gray-600 h-56 px-2'>
+              <div className='dark:text-warm-300 text-warm-500 h-56 px-2'>
                 <Catalog toc={post.toc} />
               </div>
             </>

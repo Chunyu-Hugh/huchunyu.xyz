@@ -77,7 +77,7 @@ const PostItemCardTop = ({ post, showSummary }) => {
         <div className='flex'></div>
 
         {(!showPreview || showSummary) && (
-          <main className='my-4 text-gray-900 dark:text-gray-300 text-lg  leading-7'>
+          <main className='my-4 text-warm-dark dark:text-gray-300 text-lg leading-7'>
             {post?.summary}
           </main>
         )}

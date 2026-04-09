@@ -21,7 +21,7 @@ const JumpToTopButton = ({ showPercent = false, percent, className }) => {
       data-aos-anchor-placement='top-center'
       className='fixed xl:right-80 right-2 mr-10 bottom-24 z-20'>
       <i
-        className='fas fa-chevron-up cursor-pointer p-2 rounded-full border bg-white dark:bg-hexo-black-gray'
+        className='fas fa-chevron-up cursor-pointer p-2 rounded-full border border-black/[0.08] dark:border-white/[0.06] bg-white dark:bg-surface-3 shadow-notion-sm hover:shadow-notion-md transition-shadow duration-200'
         onClick={() => {
           window.scrollTo({ top: 0, behavior: 'smooth' })
         }}

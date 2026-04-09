@@ -26,7 +26,7 @@ const Footer = ({ title }) => {
   return (
     <footer
       id='footer-bottom'
-      className='z-10 bg-black text-white justify-center m-auto w-full p-6 relative'>
+      className='z-10 bg-warm-dark text-white/90 justify-center m-auto w-full p-6 relative'>
       <div className='max-w-screen-3xl w-full mx-auto '>
         {/* 信息与链接区块 */}
         <div className='w-full flex lg:flex-row flex-col justify-between py-16'>
@@ -75,7 +75,7 @@ const Footer = ({ title }) => {
         </div>
 
         {/* 页脚 */}
-        <div className='py-4 flex flex-col lg:flex-row  justify-between items-center border-t border-gray-400'>
+        <div className='py-4 flex flex-col lg:flex-row  justify-between items-center border-t border-white/[0.1]'>
           <div className='flex gap-x-2 flex-wrap justify-between items-center'>
             <CopyRightDate />
             <PoweredBy />

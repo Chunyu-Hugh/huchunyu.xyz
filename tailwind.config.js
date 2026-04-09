@@ -39,7 +39,27 @@ module.exports = {
           'black-gray': '#101414',
           'light-gray': '#e5e5e5'
         },
-        // black: '#212b36',
+        // Notion-inspired warm neutral palette
+        warm: {
+          white: '#f6f5f4',   // 暖白底色，交替段落背景
+          dark: '#31302e',    // 暖色深色文字
+          500: '#615d59',     // 次要文字
+          300: '#a39e98'      // 占位符/禁用
+        },
+        accent: {
+          DEFAULT: '#0075de', // Notion Blue — 唯一强调色
+          dark: '#005bab',    // hover / active
+          light: '#f2f9ff',   // badge 背景
+          text: '#097fe8'     // badge 文字
+        },
+        // 暗色表面阶梯
+        surface: {
+          1: '#1a1a1a',       // 最深背景
+          2: '#222221',       // 面板/sidebar
+          3: '#2c2c2b',       // 卡片/浮层
+          4: '#363634'        // hover 提升
+        },
+        // 保留兼容
         'dark-700': '#090e34b3',
         dark: {
           DEFAULT: '#111928',
@@ -51,11 +71,11 @@ module.exports = {
           7: '#D1D5DB',
           8: '#E5E7EB'
         },
-        primary: '#3758F9',
-        'blue-dark': '#1B44C8',
-        secondary: '#13C296',
-        'body-color': '#637381',
-        'body-secondary': '#8899A8',
+        primary: '#0075de',
+        'blue-dark': '#005bab',
+        secondary: '#0075de',
+        'body-color': '#615d59',
+        'body-secondary': '#a39e98',
         warning: '#FBBF24',
         stroke: '#DFE4EA',
         'gray-1': '#F9FAFB',
@@ -68,7 +88,19 @@ module.exports = {
         'screen-3xl': '1440px',
         'screen-4xl': '1560px'
       },
+      borderRadius: {
+        micro: '4px',
+        standard: '6px',
+        card: '12px',
+        panel: '16px',
+        pill: '9999px'
+      },
       boxShadow: {
+        // Notion 风格：多层微透明叠加
+        'notion-sm': '0px 0.175px 1.04px rgba(0,0,0,0.01), 0px 0.8px 2.93px rgba(0,0,0,0.02), 0px 2px 7.85px rgba(0,0,0,0.027), 0px 4px 18px rgba(0,0,0,0.04)',
+        'notion-md': '0px 1px 3px rgba(0,0,0,0.01), 0px 3px 7px rgba(0,0,0,0.02), 0px 7px 15px rgba(0,0,0,0.02), 0px 14px 28px rgba(0,0,0,0.04)',
+        'notion-lg': '0px 1px 3px rgba(0,0,0,0.01), 0px 3px 7px rgba(0,0,0,0.02), 0px 7px 15px rgba(0,0,0,0.02), 0px 14px 28px rgba(0,0,0,0.04), 0px 23px 52px rgba(0,0,0,0.05)',
+        // 保留原有兼容
         input: '0px 7px 20px rgba(0, 0, 0, 0.03)',
         form: '0px 1px 55px -11px rgba(0, 0, 0, 0.01)',
         pricing: '0px 0px 40px 0px rgba(0, 0, 0, 0.08)',

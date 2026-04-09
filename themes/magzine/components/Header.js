@@ -123,7 +123,7 @@ export default function Header(props) {
     <div
       id='top-navbar-wrapper'
       className={
-        'sticky top-0 w-full z-40 shadow bg-white dark:bg-hexo-black-gray '
+        'sticky top-0 w-full z-40 bg-white/80 dark:bg-surface-1/80 backdrop-blur-lg backdrop-saturate-150 border-b border-black/[0.08] dark:border-white/[0.08]'
       }>
       {/* 导航栏菜单内容 */}
       <div
@@ -135,7 +135,7 @@ export default function Header(props) {
             autoFocus
             id='simple-search'
             onKeyUp={onKeyUp}
-            className='outline-none dark:bg-hexo-black-gray dark:text flex flex-row text-base relative w-full border-b py-2'
+            className='outline-none dark:bg-surface-2 dark:text-gray-300 flex flex-row text-base relative w-full border-b border-black/[0.08] dark:border-white/[0.06] py-2'
             aria-label='Submit search'
             type='search'
             name='s'
@@ -202,7 +202,7 @@ export default function Header(props) {
             <>
               <SignedOut>
                 <SignInButton mode='modal'>
-                  <button className='bg-gray-800 hover:bg-gray-900 text-white rounded-lg px-3 py-2'>
+                  <button className='bg-accent hover:bg-accent-dark text-white rounded-standard px-3 py-2 transition-colors duration-200'>
                     {locale.COMMON.SIGN_IN}
                   </button>
                 </SignInButton>
@@ -222,7 +222,7 @@ export default function Header(props) {
         collapseRef={collapseRef}
         isOpen={isOpen}
         className='md:hidden'>
-        <div className='bg-white dark:bg-hexo-black-gray pt-1 py-2'>
+        <div className='bg-white dark:bg-surface-2 pt-1 py-2'>
           <MenuBarMobile
             {...props}
             onHeightChange={param =>

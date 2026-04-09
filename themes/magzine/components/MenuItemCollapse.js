@@ -41,9 +41,9 @@ export const MenuItemCollapse = props => {
       <div
         className={
           (selected
-            ? 'bg-gray-600 text-white hover:text-white'
-            : 'hover:text-gray-600') +
-          ' px-7 w-full text-left duration-200 dark:bg-hexo-black-gray dark:border-black'
+            ? 'text-accent font-medium'
+            : 'hover:text-accent transition-colors') +
+          ' px-7 w-full text-left duration-200 dark:bg-surface-2 dark:border-surface-1'
         }
         onClick={toggleShow}>
         {!hasSubMenu && (
@@ -82,8 +82,8 @@ export const MenuItemCollapse = props => {
               <div
                 key={sLink.id}
                 className='
-              not:last-child:border-b-0 border-b dark:border-gray-800 py-2 pl-12 cursor-pointer hover:bg-gray-100 dark:text-gray-200
-              dark:bg-black text-left justify-start text-gray-600 bg-gray-50 dark:hover:bg-gray-900 tracking-widest transition-all duration-200'>
+              not:last-child:border-b-0 border-b border-black/[0.06] dark:border-white/[0.06] py-2 pl-12 cursor-pointer hover:bg-warm-white dark:text-gray-200
+              dark:bg-surface-2 text-left justify-start text-warm-500 bg-gray-50 dark:hover:bg-surface-4 tracking-widest transition-all duration-200'>
                 <SmartLink href={sLink.href} target={link?.target}>
                   <div>
                     <div
